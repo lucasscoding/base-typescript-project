@@ -9,9 +9,9 @@
     "test:unit": "npm test -- --watch",
     "test:staged": "npm test -- --findRelatedTests",
     "test:ci": "npm test -- --coverage",
-    "start": "node dist/src/index.js",
-    "build": "npm run clean && tsc -p tsconfig-build.json",
-    "dev": "nodemon --watch 'src/' --exec 'ts-node src/index.ts' -e ts"
+    "start": "npm run build && node dist/src/main/entrypoint.js",
+    "build": "tsc -p tsconfig-build.json",
+    "dev": "nodemon --watch 'src/' --exec 'ts-node src/main/entrypoint.ts' -e ts"
   },
   "keywords": [],
   "author": "",
